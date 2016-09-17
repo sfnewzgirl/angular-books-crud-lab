@@ -4,15 +4,19 @@ angular.module('booksApp')
 BooksIndexController.$inject = ['$http'];
 
 function BooksIndexController ($http) {
+  console.log('controller start');
   var vm = this;
+  vm.books = [];
   // var vm.NewBook = {};
   $http({
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books'
-  }).then(function indexCallback(response) {
-    console.log(response);
-  }, function errorCallback(response) {
-    console.log(response);
+  }).then(
+    function indexCallback(response) {
+      console.log('GET-success-cb', response);
+      vm.books = response.data.books;
+    },
+    function errorCallback(response) {
+      console.log('GET-error-cb', response);
   });
-
 }
