@@ -4,10 +4,10 @@ angular.module('booksApp', ['ngRoute'])
 config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/' {
+    .when('/', {
       templateUrl: '/templates/books.html',
       controller: 'BooksIndexController',
-      controllerAs: 'booksIndexCtlr'
+      controllerAs: 'booksIndexCtrl'
     })
   $locationProvider.html5Mode({
     enabled: true,
