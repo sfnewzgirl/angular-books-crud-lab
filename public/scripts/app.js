@@ -9,14 +9,18 @@ function config ($routeProvider, $locationProvider) {
     templateUrl: '/views/templates/books.html',
     controller: 'BooksIndexController',
     controllerAs: 'booksIndexCtrl'
+  })
+  .when('/books/:id', {
+    templateUrl: '/views/templates/book-show.html',
+    controller: 'BookShowController',
+    controllerAs: 'bookShowCtrl'
   });
-  // console.log('config-middle');
-  /*
+  console.log('config-middle');
   $locationProvider
   .html5Mode({
     enabled: true,
-    requireBase: false
+    requireBase: false,
+    rewriteLinks: true
   });
-  */
-  // console.log('config-exit');
+  console.log('config-exit');
 }

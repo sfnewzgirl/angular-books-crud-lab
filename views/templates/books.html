@@ -7,7 +7,7 @@
           <li class="book-list-item">
             <img ng-src="{{ book.image }}"/>
             <h2 class="inline-header">Book Title: </h2>
-            <span>{{ book.title }}</span>
+            <span><a ng-href="books/{{book._id}}">{{ book.title }}</a></span>
             <h2 class="inline-header">Author: </h2>
             <span>{{ book.author }}</span>
             <h4 class="inline-header">Release Date: </h4>

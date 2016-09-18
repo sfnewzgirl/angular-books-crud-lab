@@ -5,13 +5,10 @@ delete button
 -->
 
 
-
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      <div ng-repeat="book in booksIndexCtrl.books | orderBy: 'title'" class = "row">
-        <ul class="books-list-group">
-          <li class="book-list-item">
+          <div class="book-list-item">
             <img ng-src="{{ book.image }}"/>
             <h2 class="inline-header">Book Title: </h2>
             <span>{{ book.title }}</span>
@@ -19,9 +16,7 @@ delete button
             <span>{{ book.author }}</span>
             <h4 class="inline-header">Release Date: </h4>
             <span>{{ book.releaseDate }}</span>
-          </li>
-        </ul>
-      </div>
+          </div>
     </div>
   </div>
 </div>
