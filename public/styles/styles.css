@@ -1,0 +1,17 @@
+.jumbotron {
+  background-image: url(../images/library-stock-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*color: #EEE;*/
+}
+.jumbotron .container {
+  height: 350px;
+}
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 4em;
+}
+ul {
+  list-style-type: none;
+}

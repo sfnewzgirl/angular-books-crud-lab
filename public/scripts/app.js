@@ -3,14 +3,14 @@ angular.module('booksApp', ['ngRoute'])
 
 config.$inject = ['$routeProvider', '$locationProvider'];
 function config ($routeProvider, $locationProvider) {
-  console.log('config-enter');
+  // console.log('config-enter');
   $routeProvider
   .when('/', {
     templateUrl: '/views/templates/books.html',
     controller: 'BooksIndexController',
     controllerAs: 'booksIndexCtrl'
   });
-  console.log('config-middle');
+  // console.log('config-middle');
   /*
   $locationProvider
   .html5Mode({
@@ -18,5 +18,5 @@ function config ($routeProvider, $locationProvider) {
     requireBase: false
   });
   */
-  console.log('config-exit');
+  // console.log('config-exit');
 }
