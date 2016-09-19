@@ -13,10 +13,10 @@ delete button
             <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title"  ng-hide="!editing" placeholder="{{ bookShowCtrl.book.title }}"</h2>
             <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" ng-hide="!editing" placeholder="{{ bookShowCtrl.book.author }}"</h2>
             <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" ng-hide="!editing" ng-model="releaseDate" placeholder="{{ bookShowCtrl.book.releaseDate }}"</h4>
-            <button ng-show="!editing"ng-click="changeClass(editing)" type="button" class="btn btn-warning">Edit</button>
-            <button ng-show="!editing" ng-click="" type="button" class="btn btn-danger">Delete</button>
-            <button type="button" ng-show="editing" class="btn btn-success">Save</button>
           </div>
+          <button ng-show="!editing" ng-click="" type="button" class="btn btn-warning">Edit</button>
+          <button ng-show="!editing" ng-click="" type="button" class="btn btn-danger">Delete</button>
+          <button ng-show="!editing" ng-click="" type="button" class="btn btn-success">Save</button>
     </div>
   </div>
 </div>
