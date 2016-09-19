@@ -10,6 +10,11 @@ function config ($routeProvider, $locationProvider) {
     controller: 'BooksIndexController',
     controllerAs: 'booksIndexCtrl'
   })
+  .when('/books', {
+    templateUrl: '/views/templates/books.html',
+    controller: 'BooksIndexController',
+    controllerAs: 'booksIndexCtrl'
+  })
   .when('/books/:id', {
     templateUrl: '/views/templates/book-show.html',
     controller: 'BookShowController',
