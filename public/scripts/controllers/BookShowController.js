@@ -8,6 +8,7 @@ function BookShowController ($http, $routeParams, $location) {
   var vm = this;
   vm.bookId = $routeParams.id;
   vm.book = {};
+
   $http({
     method: 'GET',
     url: 'https://super-crud.herokuapp.com/books/' + vm.bookId
@@ -20,4 +21,19 @@ function BookShowController ($http, $routeParams, $location) {
     function errorCallback(response) {
       console.log('book-show get error', response);
   });
+
+  vm.deletebook = function (book) {
+    $http({
+      method: 'DELETE',
+      url: 'https://super-crud.herokuapp.com/books/' + vm.bookId
+    }).then(
+      function deleteCallback(response) {
+        console.log('book-delete success', response);
+        var bookIndex = vm.book.indexOf(book);
+        vm.books.book.splice(bookIndex, 1);
+      }, function deleteError(response) {
+        console.log('book-delete error', response);
+      });
+  }
+
 }

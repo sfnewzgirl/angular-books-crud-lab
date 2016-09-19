@@ -8,7 +8,7 @@ delete button
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-          <div class="book-list-item" ng-class"!editing">
+          <div class="book-list-item">
             <img ng-src="{{ bookShowCtrl.book.image }}"/>
             <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title"  ng-show="editing" placeholder="{{ bookShowCtrl.book.title }}"</h2>
             <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" ng-show="editing" placeholder="{{ bookShowCtrl.book.author }}"</h2>
