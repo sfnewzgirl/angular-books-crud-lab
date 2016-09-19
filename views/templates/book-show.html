@@ -10,12 +10,16 @@ delete button
     <div class="col-md-8 offset-md-2">
           <div class="book-list-item">
             <img ng-src="{{ bookShowCtrl.book.image }}"/>
-            <h2 class="inline-header">Book Title: </h2>
-            <span>{{ bookShowCtrl.book.title }}</span>
-            <h2 class="inline-header">Author: </h2>
-            <span>{{ bookShowCtrl.book.author }}</span>
-            <h4 class="inline-header">Release Date: </h4>
-            <span>{{ bookShowCtrl.book.releaseDate }}</span>
+            <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span></h2>
+            <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span></h2>
+            <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span></h4>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+
+<!-- <a href="#" ng-click="editForm=!editForm" class="btn btn-default">Edit <span class="glyphicon glyphicon-pencil"></span></a>&nbsp;
+<a href="#" ng-click="booksShowCtrl.deleteBook(booksShowCtrl.book)" class="btn btn-default">Delete <span class="glyphicon glyphicon-trash"></span></a> -->
+
+
           </div>
     </div>
   </div>
