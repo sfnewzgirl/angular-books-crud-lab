@@ -10,13 +10,13 @@ delete button
     <div class="col-md-8 offset-md-2">
           <div class="book-list-item" ng-class"!editing">
             <img ng-src="{{ bookShowCtrl.book.image }}"/>
-            <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title"  ng-hide="!editing" placeholder="{{ bookShowCtrl.book.title }}"</h2>
-            <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" ng-hide="!editing" placeholder="{{ bookShowCtrl.book.author }}"</h2>
-            <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" ng-hide="!editing" ng-model="releaseDate" placeholder="{{ bookShowCtrl.book.releaseDate }}"</h4>
+            <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title"  ng-show="editing" placeholder="{{ bookShowCtrl.book.title }}"</h2>
+            <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" ng-show="editing" placeholder="{{ bookShowCtrl.book.author }}"</h2>
+            <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" ng-model="releaseDate" ng-show="editing" placeholder="{{ bookShowCtrl.book.releaseDate }}"</h4>
           </div>
-          <button ng-show="!editing" ng-click="" type="button" class="btn btn-warning">Edit</button>
-          <button ng-show="!editing" ng-click="" type="button" class="btn btn-danger">Delete</button>
-          <button ng-show="!editing" ng-click="" type="button" class="btn btn-success">Save</button>
+          <button ng-show="!editing" ng-click=" !editing = false " type="button" class="btn btn-warning">Edit</button>
+          <button ng-show="!editing" ng-click="bookShowCtrl.book" type="button" class="btn btn-danger">Delete</button>
+          <button ng-show="editing" ng-click="bookShowCtrl.book !editing = true" type="button" class="btn btn-success">Save</button>
     </div>
   </div>
 </div>
