@@ -8,20 +8,14 @@ delete button
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-          <div class="book-list-item">
+          <div class="book-list-item" ng-class"!editing">
             <img ng-src="{{ bookShowCtrl.book.image }}"/>
-            <h2 class="inline-header" ng-class"!editing">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title" placeholder="{{ bookShowCtrl.book.title }}"</h2>
-            <h2 class="inline-header" ng-class"!editing">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" placeholder="{{ bookShowCtrl.book.author }}"</h2>
-            <h4 class="inline-header" ng-class="!editing">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" ng-model="releaseDate" placeholder="{{ bookShowCtrl.book.releaseDate }}"</h4>
-            <button ng-click="changeClass(editing)" type="button" class="btn btn-warning">Edit</button>
-            <button ng-click="" type="button" class="btn btn-danger">Delete</button>
-
-
-
+            <h2 class="inline-header">Book Title: <span>{{ bookShowCtrl.book.title }}</span><input type="text" ng-model="title"  ng-hide="!editing" placeholder="{{ bookShowCtrl.book.title }}"</h2>
+            <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" ng-model="author" ng-hide="!editing" placeholder="{{ bookShowCtrl.book.author }}"</h2>
+            <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" ng-hide="!editing" ng-model="releaseDate" placeholder="{{ bookShowCtrl.book.releaseDate }}"</h4>
+            <button ng-show="!editing"ng-click="changeClass(editing)" type="button" class="btn btn-warning">Edit</button>
+            <button ng-show="!editing" ng-click="" type="button" class="btn btn-danger">Delete</button>
             <button type="button" ng-show="editing" class="btn btn-success">Save</button>
-
-
-
           </div>
     </div>
   </div>
