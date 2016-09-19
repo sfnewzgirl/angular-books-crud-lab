@@ -14,9 +14,9 @@ delete button
             <h2 class="inline-header">Author: <span>{{ bookShowCtrl.book.author }}</span><input type="text" class="form-control" ng-model="book.author" ng-show="editing" placeholder="{{ bookShowCtrl.book.author }}"></h2>
             <h4 class="inline-header">Release Date: <span>{{ bookShowCtrl.book.releaseDate }}</span><input type="text" class="form-control" ng-model="book.releaseDate" ng-show="editing" placeholder="{{ bookShowCtrl.book.releaseDate }}"></h4>
           </div>
-          <button ng-click="editing = true" type="button" class="btn btn-warning">Edit</button>
-          <button ng-click="bookShowCtrl.book" type="button" class="btn btn-danger">Delete</button>
-          <button ng-click="bookShowCtrl.book !editing = true" type="button" class="btn btn-success">Save</button>
+          <button ng-click="editing = true" ng-hide="editing" type="button" class="btn btn-warning">Edit</button>
+          <button ng-click="bookShowCtrl.deleteBook(book)" ng-hide="editing" type="button" class="btn btn-danger">Delete</button>
+          <button ng-click="editing = false" ng-show="editing" type="button" class="btn btn-success">Save</button>
     </div>
   </div>
 </div>
